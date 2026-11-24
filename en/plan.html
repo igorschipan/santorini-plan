@@ -19,8 +19,8 @@
 </div></header>
 <div class="meander" aria-hidden="true"></div>
 <main id="main"><div class="wrap dochead"><h1>Full plan</h1><p>Everything about calling a waiter, payments and ordering through the Santorini QR menu: how to connect the menu to the Probus POS, how to take payments and how not to lose money.</p><a class="fig" href="../diagrams/roadmap-brief-en.html" target="_blank" rel="noopener"><figure><img src="../assets/roadmap-brief-en.webp" alt="The plan as a diagram" width="1406" height="474"><figcaption><b>The plan as a diagram</b><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5H3.5v9h9V10M9 3.5h3.5V7M12.5 3.5 7 9" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></figcaption></figure></a><p style="margin:12px 0 0;font-size:15px"><a href="../diagrams/roadmap-detail-ru.html" target="_blank" rel="noopener">Detailed diagram (in Russian)</a></p></div><div class="wrap doc">
-<nav class="toc" aria-label="Contents"><b>Contents</b><ol><li><a href="#goal">Goal</a></li><li><a href="#stages">Stages</a></li><li><a href="#control">How guests cannot leave without paying</a></li><li><a href="#probus">The Probus POS</a></li><li><a href="#call">Calling a waiter</a></li><li><a href="#payment">Payment</a></li><li><a href="#risks">Risks and protection</a></li><li><a href="#tests">Checks before launch</a></li><li><a href="#decisions">What the owner decides</a></li><li><a href="#sources">Sources</a></li></ol></nav>
-<article><details class="mtoc"><summary>Contents</summary><ol><li><a href="#goal">Goal</a></li><li><a href="#stages">Stages</a></li><li><a href="#control">How guests cannot leave without paying</a></li><li><a href="#probus">The Probus POS</a></li><li><a href="#call">Calling a waiter</a></li><li><a href="#payment">Payment</a></li><li><a href="#risks">Risks and protection</a></li><li><a href="#tests">Checks before launch</a></li><li><a href="#decisions">What the owner decides</a></li><li><a href="#sources">Sources</a></li></ol></details>
+<nav class="toc" aria-label="Contents"><b>Contents</b><ol><li><a href="#goal">Goal</a></li><li><a href="#stages">Stages</a></li><li><a href="#control">How guests cannot leave without paying</a></li><li><a href="#probus">The Probus POS</a></li><li><a href="#call">Calling a waiter</a></li><li><a href="#payment">Payment</a></li><li><a href="#risks">Risks and protection</a></li><li><a href="#tests">Checks before launch</a></li><li><a href="#next">Where to start</a></li><li><a href="#decisions">What the owner decides</a></li><li><a href="#sources">Sources</a></li></ol></nav>
+<article><details class="mtoc"><summary>Contents</summary><ol><li><a href="#goal">Goal</a></li><li><a href="#stages">Stages</a></li><li><a href="#control">How guests cannot leave without paying</a></li><li><a href="#probus">The Probus POS</a></li><li><a href="#call">Calling a waiter</a></li><li><a href="#payment">Payment</a></li><li><a href="#risks">Risks and protection</a></li><li><a href="#tests">Checks before launch</a></li><li><a href="#next">Where to start</a></li><li><a href="#decisions">What the owner decides</a></li><li><a href="#sources">Sources</a></li></ol></details>
 
 <h2 id="goal">Goal</h2>
 <p>The guest orders and pays in the app without waiting for a waiter, and the restaurant does not lose money. We get there in stages, adding at each stage whatever is already available.</p>
@@ -28,7 +28,7 @@
 <ul>
 <li>the guest scans a QR code and orders, the order goes straight into the POS and the kitchen, and the food is brought to the table;</li>
 <li>the guest pays in the app, for each order or at the end on an open tab;</li>
-<li>waiters bring food, help guests and handle unusual cases, and the call button stays;</li>
+<li>waiters bring food, help guests and handle unusual cases; the call button stays for guests who want a person;</li>
 <li>the menu, prices and sold-out items come from the POS.</li>
 </ul>
 <h2 id="stages">Stages</h2>
@@ -54,124 +54,164 @@
 <tr>
 <td data-label="Stage">1. Call</td>
 <td data-label="What the guest gets">Call a waiter or ask for the bill with one tap</td>
-<td data-label="What is needed">Our server, an app on the waiters' tablets</td>
+<td data-label="What is needed">Our server, an app on the waiters' tablets (Probus's answer to question 7)</td>
 <td data-label="Money control">No money involved</td>
-<td data-label="When to move on">2 weeks at one location, every call answered</td>
+<td data-label="When to move on">2 weeks at one location: every call answered, average response time known</td>
 </tr>
 <tr>
 <td data-label="Stage">2. Pay at the table</td>
 <td data-label="What the guest gets">Pays with their phone by a QR code on the waiter's tablet, can split the bill</td>
 <td data-label="What is needed">Contract with a payment provider, test mode, a limit per payment</td>
-<td data-label="Money control">Green status on the tablet, evening reconciliation</td>
+<td data-label="Money control">Green status on the tablet, the guest leaves after it; evening reconciliation</td>
 <td data-label="When to move on">2 weeks with no mismatches</td>
 </tr>
 <tr>
 <td data-label="Stage">3. Pay without a waiter</td>
-<td data-label="What the guest gets">Pays the bill right from the menu</td>
-<td data-label="What is needed">The cashier enters the amount, or it comes from the POS; sealed table cards, own domain</td>
-<td data-label="Money control">An unpaid table shows on every tablet</td>
+<td data-label="What the guest gets">Pays the bill right from the menu, no waiting for a waiter</td>
+<td data-label="What is needed">Without Probus the cashier enters the amount from the bar screen when the guest asks; with Probus it arrives by itself. Table cards checked every morning, own domain, seals</td>
+<td data-label="Money control">An unpaid table shows on every tablet and on the bar screen</td>
 <td data-label="When to move on">A month with no swapped cards or mismatches</td>
 </tr>
 <tr>
 <td data-label="Stage">4. Order without a waiter</td>
-<td data-label="What the guest gets">Orders right from the menu</td>
-<td data-label="What is needed">Without Probus the waiter re-enters the order in Order Taker</td>
+<td data-label="What the guest gets">Orders right from the menu, no waiting for a waiter</td>
+<td data-label="What is needed">Without Probus the order arrives on the tablet, the waiter re-enters it in Order Taker and marks it "transferred". With Probus the order goes straight into the POS</td>
 <td data-label="Money control">Only paid orders reach the kitchen</td>
-<td data-label="When to move on">Probus has built the connection</td>
+<td data-label="When to move on">Probus has built the connection (option B)</td>
 </tr>
 <tr>
 <td data-label="Stage">5. Goal</td>
-<td data-label="What the guest gets">Full self-service: the order is in the kitchen, payment closes the bill</td>
-<td data-label="What is needed">Upgrade from Probus</td>
+<td data-label="What the guest gets">Full self-service: the order goes straight to the kitchen, payment closes the bill, menu and sold-out items come from the POS</td>
+<td data-label="What is needed">Upgrade from Probus (option B)</td>
 <td data-label="Money control">Pay per order or a hold on the card</td>
 <td data-label="When to move on"></td>
 </tr>
 </tbody>
 </table></div>
-<p>If Probus builds the connection quickly, the manual steps of stages 3 and 4 are skipped. If Probus cannot, we stay at stage 4 and the owner decides between Probus's own self-order module (if there is one) and a different POS.</p>
+<p>If Probus builds the connection quickly, the manual steps of stages 3 and 4 are skipped. If Probus cannot, stage 5 is out of reach with this POS: we stay at stage 4 and the owner decides between Probus's own self-order module (if there is one) and a different POS.</p>
+<h3>Stage 4 without Probus</h3>
+<p>The waiter re-enters the app order in Order Taker by hand, and a mistake is possible here: the guest paid for one thing and the kitchen got another. So the waiter marks every order "transferred", and in the evening app orders are matched against the bills. At this stage menu prices must match PRESTO including tax and service charge, otherwise the guest pays the wrong amount.</p>
 <h2 id="control">How guests cannot leave without paying</h2>
-<p>One rule: an order from the app goes to the kitchen only if it is paid or covered by a hold on the guest's card. There are no unpaid orders from the app. Large QR ordering systems such as Toast in the USA work the same way.</p>
+<p>One rule: an order from the app goes to the kitchen only if it is paid or covered by a hold on the guest's card. There are no unpaid orders from the app. Large QR ordering systems such as Toast in the USA work the same way: the guest chooses between paying per order and an open tab with a card on file.</p>
 <h3>Pay per order (from stage 4)</h3>
 <p>The guest pays when sending the order, by QRIS, card or e-wallet. An unpaid order is not cooked, so nobody can leave without paying. This works with QRIS too, the main local payment method.</p>
 <h3>Open tab on a card (stage 5)</h3>
 <ul>
 <li>On the first order the guest's bank holds an amount on the card, for example Rp 1,000,000. No money is taken yet.</li>
-<li>The guest keeps ordering while the bill stays below the hold. Near the limit, the next order needs a top-up or a new hold.</li>
+<li>The guest keeps ordering while the bill stays below the hold. When the bill nears the limit, the next order needs a top-up or a new hold.</li>
 <li>At the end the guest taps "Close the bill": the exact amount is charged and the rest is released.</li>
-<li>If the guest leaves without closing, the bill closes by itself after a set time or at closing, and the amount is charged from the hold.</li>
+<li>If the guest leaves without closing, the bill closes by itself after a set time without orders or at closing time, and the amount is charged from the hold.</li>
 </ul>
-<p>Limits. Only cards support a hold, QRIS does not. A hold lasts about 7 days, so every bill is closed the same evening. The charge cannot exceed the hold, and the guest's bank occasionally refuses the charge. On a debit card the held amount reduces the available balance right away, and the guest sees a warning. This mode needs the Probus connection, because closing a bill without the guest requires the exact total from the POS.</p>
+<p>This mode needs the Probus connection: to close a bill ourselves we need the exact bill total from the POS, including whatever the waiter added.</p>
+<p>Limits:</p>
+<ul>
+<li>Midtrans and Xendit support holds on cards only. QRIS does not, so a guest paying by QRIS can only pay per order.</li>
+<li>A hold lasts about 7 days, then the bank releases it. So every bill is closed the same evening.</li>
+<li>The charge cannot exceed the hold.</li>
+<li>A hold is not a guarantee: the guest's bank may refuse the charge. The risk is small but real.</li>
+<li>At Xendit a hold can be charged only once. If the bill is split, the other guests pay their share separately and the tab owner pays the rest.</li>
+<li>On a debit card the held amount reduces the available balance right away. The guest sees a warning on screen.</li>
+</ul>
 <h3>Items added by the waiter</h3>
-<p>Items the waiter adds in Order Taker go on the same table bill. On an open tab they are covered by the hold. With pay per order the waiter asks the guest to pay for them before leaving, as today. The screen at the bar highlights tables with an unpaid amount.</p>
+<p>Items the waiter adds in Order Taker go on the same table bill. On an open tab they are covered by the hold. With pay per order the waiter asks the guest to pay for them before leaving, as today. The bar screen and the tablets highlight tables with an unpaid amount not covered by a hold.</p>
 <h2 id="probus">The Probus POS</h2>
 <ul>
-<li>Probus System is made by CV Mitra Solusi Mandiri in Denpasar, in business since 2010, with more than 250 clients, 75 of them hotels in Bali and Nusa Tenggara.</li>
-<li>For restaurants: the PRESTO POS, the Order Taker app for waiters (Android, paired with PRESTO), a self-service kiosk with payment, stock and accounting. There is also a separate cloud POS, Barong POS.</li>
-<li>PRESTO runs on a server inside the restaurant and works without internet.</li>
-<li>There is no public developer API. Probus officially takes on custom work for clients.</li>
+<li>Probus System is made by CV Mitra Solusi Mandiri in Denpasar, in business since 2010, with more than 250 clients, 75 of them hotels in Bali and Nusa Tenggara (Gili Air is in Nusa Tenggara too).</li>
+<li>For restaurants: the PRESTO POS (floor plan, bill splitting, kitchen printing), the Order Taker app for waiters, a self-service kiosk where the guest orders and pays, stock and accounting.</li>
+<li>Order Taker runs on Android, paired with PRESTO: floor plan, taking orders, several payment methods, bill splitting. According to AppBrain it was removed from Google Play on 3 December 2024; Probus apparently installs it on tablets itself now. Santorini's waiters already work on tablets.</li>
+<li>PRESTO runs on a server inside the restaurant and works without internet. A backup is made every day.</li>
+<li>The same company also sells Barong POS, a separate Android POS at Rp 250,000 a month that works differently from PRESTO. So the first thing to check is which POS the restaurant has; the plan below is written for PRESTO with Order Taker.</li>
+<li>There is no public developer API, and the help site only describes modules. The website lists integrations with the STAAH and eZee channel managers, door locks, accounting and unnamed "payment gateways". Probus officially takes on custom work for clients.</li>
 </ul>
 <p>Conclusion: we cannot connect to the POS on our own, an agreement with Probus is needed. Their kiosk already sends orders and payments into the POS from outside, so the POS most likely supports this.</p>
+<p>Probus contacts: phone +62 361 256 500 and (0361) 241689, info@probussystem.com, support@probussystem.com, sales WhatsApp +62 819 9947 3110 (Herman Suyanto). Office: Jl. PB Sudirman, Pertokoan Sudirman Agung Blok C No. 51, Denpasar.</p>
+<h3>How others do it</h3>
+<ul>
+<li>The menu service and the POS are linked by a bridge: an order from the phone enters the POS as an ordinary table order and goes to the kitchen as usual.</li>
+<li>If the POS only works inside the restaurant, a small program or tablet is placed on site. It reaches out to the menu service and fetches orders itself. The POS is never opened to the internet.</li>
+<li>Payment: the guest opens the table bill, the amount comes from the POS, and the POS closes the bill only after confirmation from the payment provider. A "paid" message on the guest's screen means nothing.</li>
+<li>Calling a waiter does not need the POS at all: a button, a notification to the waiter, "Accept", and the call closes by itself after 10 minutes.</li>
+</ul>
 <h3>Two ways to connect</h3>
-<p>Option A, without Probus. The waiter or cashier enters the bill number and amount from the POS in our app, the guest pays, and the payment is then marked in the POS as a separate method, "Online QR". Quick to launch, but the amount is entered by hand.</p>
-<p>Option B, with an upgrade from Probus. Our app reads the open table bill (items, tax, service charge) and marks the payment by itself. Order Taker gets a "Pay online" button. Orders from the menu go straight into the POS and the kitchen. The connection is outgoing only: a small program next to the POS contacts our server, and the Probus server is never opened to the internet.</p>
+<p>Option A, without Probus. The waiter opens the table bill in Order Taker (or the cashier in PRESTO) and enters the bill number and amount in our app, the guest pays, and the payment is then marked in the POS as a separate method, "Online QR". Quick to launch, but the amount is entered by hand. Paying straight from the menu without a waiter is switched on after the pilot.</p>
+<p>Option B, with an upgrade from Probus. Our app reads the open table bill (items, tax, service charge, amount due) and marks the payment by itself. Order Taker gets a "Pay online" button: a QR code for the exact bill total, no manual entry. Waiter calls can be shown there too. Orders from the menu go straight into the POS and the kitchen. The connection is outgoing only: a small program next to the POS contacts our server, and the Probus server is never opened to the internet.</p>
 <h3 id="questions">Questions for Probus</h3>
 <ol>
 <li>Which program and version runs at Santorini Gili Air and the other locations (PRESTO or Barong POS), and is the server local or in the cloud?</li>
 <li>How does the self-service kiosk pass orders and payments into the POS? Can an external QR menu connect the same way? Do you have your own QR ordering module?</li>
 <li>Can an open table bill be read and a payment marked from outside? If not, what would the upgrade cost and how long would it take?</li>
-<li>Which payment providers does the POS already work with?</li>
+<li>Which payment providers does the POS already work with (Midtrans, DOKU, Xendit, bank card terminals)?</li>
 <li>Can the menu and prices be exported so the QR menu takes them from the POS?</li>
 <li>Who is responsible if something breaks where the systems meet? Is there a test copy of the POS?</li>
-<li>Which tablets does Order Taker run on, can other apps be installed on them, and do they have internet access?</li>
-<li>Can waiter calls and a "Pay online" button be shown inside Order Taker?</li>
+<li>Which tablets does Order Taker run on (Android or iPad), how is it installed and updated, can other apps be installed on those tablets, and do they have internet access or only the restaurant network?</li>
+<li>Can waiter calls and bill requests be shown inside Order Taker, and can a "Pay online" button be added there?</li>
 </ol>
 <h2 id="call">Calling a waiter</h2>
-<p>Buttons in the menu: "Call a waiter", "Bill: cash, card or QRIS", "Water". Each table has its own QR code with a random key, and the general menu link cannot send calls. One call of each type per table every minute or two, and any table can be switched off with one button.</p>
-<p>Calls arrive in our app on the same tablets that run Order Taker. The tablets belong to the restaurant and are set up once. Best of all, Probus could show the calls inside Order Taker.</p>
-<p>Everyone has WhatsApp, but calls get lost among personal chats there, the volume cannot be controlled, and each message costs about Rp 360. So WhatsApp stays as a backup channel for the manager.</p>
+<p>Buttons in the menu: "Call a waiter", "Bill: cash, card or QRIS", "Water". Each table has its own QR code with a long random key, and the general menu link cannot send calls.</p>
+<p>Protection against pranks: one call of each type per table every minute or two, a cap on the number of calls, any table can be switched off with one button, and new QR codes are printed if one leaks.</p>
+<p>Calls arrive in our app on the same tablets that run Order Taker and pop up over it. The tablets belong to the restaurant and are set up once, so nothing depends on personal phones. Best of all, Probus could show the calls inside Order Taker, so the waiter has a single app.</p>
+<p>This needs a small server of ours, because the menu page is static today. The same Cloudflare account that hosts the menu will do. The tablets need internet; the restaurant network alone is not enough.</p>
+<h3>Why not Telegram, and why not only WhatsApp</h3>
+<p>In Bali people use WhatsApp, so Telegram is out. Everyone has WhatsApp and phones do not put it to sleep, but calls get lost among personal chats, and the volume and repeat of the signal cannot be set. It needs a separate restaurant number approved by Meta, and messages cost money: about Rp 360 per message to an Indonesian number under Meta's rates from 1 October 2026 (some messages are free if the person wrote to the bot in the last 24 hours). An "Accept" button inside the message is possible. So WhatsApp stays as a backup channel for the manager.</p>
 <h3>What can go wrong</h3>
 <ul>
-<li>The tablet lies on the counter while the waiter carries food.</li>
+<li>The tablet lies on the counter while the waiter carries food: the sound does not reach everywhere and vibration cannot be felt.</li>
 <li>Several waiters share one tablet, so it is unclear who took the call.</li>
-<li>No internet: Order Taker works over the restaurant network, but calls need internet.</li>
-<li>Some tablets put apps to sleep to save battery.</li>
+<li>Order Taker works over the restaurant network, but our app needs internet, which can be unstable on Gili.</li>
+<li>Tablets of some brands (Xiaomi, Oppo, Vivo, Realme) put apps to sleep to save battery. An app swiped away from the recent list gets no notifications until it is opened. On Android 14 and later, full-screen calls like an alarm clock must be allowed by hand.</li>
+<li>If the tablets turn out to be iPads: in silent mode there is only vibration. Apple lets apps override silent mode only with special approval, mostly for public services, healthcare and smart homes.</li>
 </ul>
+<p>No single device guarantees delivery; a system of five layers does.</p>
 <h3>Five layers of protection</h3>
 <ol>
-<li>The app on the tablet: a loud signal, a full-screen call and an "Accept" button.</li>
-<li>The signal repeats until someone accepts the call. Each waiter signs in with a PIN at the start of the shift, so it is clear who accepted.</li>
-<li>If nobody accepts within 30 seconds, the call goes to every tablet on shift, after 60 seconds to the manager and the bar screen, after 2 minutes to the manager on WhatsApp. The guest sees what is happening.</li>
-<li>A screen at the bar: always on, loud, independent of the waiters' tablets.</li>
-<li>Connection check: every tablet reports once a minute. If one drops out, the manager sees it and calls go to the others. A test call at the start of every shift.</li>
+<li>The app on the tablet: its own loud signal, a full-screen call over Order Taker and an "Accept" button. When opened, the app fetches all open calls itself, even if a notification was lost.</li>
+<li>The signal repeats until someone taps "Accept". Each waiter signs in with a PIN at the start of the shift, so it is clear who accepted. Once one waiter accepts, the call disappears for the others.</li>
+<li>If nobody accepts within 30 seconds, the call goes to every tablet on shift; after 60 seconds to the manager and the bar screen with a signal; after 2 minutes to the manager on WhatsApp. The guest sees what is happening: "A waiter is coming" or "Passed to the manager".</li>
+<li>A screen at the bar: a tablet on charge, always on, loud. It shows every call and bill request with a timer. It does not depend on the waiters' tablets, so it is the main safety layer. The cashier works there too.</li>
+<li>Connection check: every tablet reports to the server once a minute. If one drops out for more than 2 minutes, the manager sees "Tablet 3 offline" and calls go to the others. A test call at the start of every shift: the waiter taps "Accept" and the system knows everything works.</li>
 </ol>
+<p>If a tablet often lies on the counter, the same app can also go on a waiter's own phone as a second channel, if they want.</p>
+<h3>Tablet setup</h3>
+<p>Each tablet is set up once: autostart, no battery restrictions, notifications on the lock screen, full-screen calls, signal through "Do not disturb", volume. The app checks some of these settings itself and shows a red warning; the rest is covered by the test call at the start of the shift. Between shifts the tablets are on charge.</p>
 <h2 id="payment">Payment</h2>
 <h3>How the guest pays (option A)</h3>
 <ol>
 <li>The guest taps "Bill" in the menu or asks a waiter.</li>
 <li>The waiter opens the table bill in Order Taker and enters the bill number and amount in our app on the same tablet.</li>
-<li>The tablet shows a QR code. The guest sees the table number and amount, checks them against the bill and pays by QRIS or card.</li>
-<li>The payment provider sends a confirmation, and our server checks that it is genuine.</li>
-<li>The table turns green on the tablet and on the bar screen. The guest leaves only after that.</li>
-<li>The waiter marks the payment in the POS as "Online QR".</li>
-<li>In the evening payments are matched with the POS.</li>
+<li>The tablet shows a QR code: QRIS for a banking app or a link to pay by card. The guest sees the table number and amount, checks them against the bill and pays.</li>
+<li>The payment provider sends our server a confirmation, and the server checks that it is genuine.</li>
+<li>The tablet and the bar screen show "Table 12 paid, Rp 412,000". The guest leaves only after that.</li>
+<li>The waiter marks the payment in Order Taker (or the cashier in PRESTO) as a separate method, "Online QR".</li>
+<li>At the end of the day the provider's payments are matched with the "Online QR" payments in the POS.</li>
 </ol>
-<p>The bill can be split: several partial payments for one table, and the bill closes once the whole amount is paid.</p>
+<p>The bill can be split: several partial payments for one table, and the bill closes once the whole amount is paid. Order Taker already splits bills. Tips in the app can be added later if the owner wants.</p>
 <h3>Payment provider</h3>
 <ul>
-<li>Midtrans, DOKU and Xendit all fit: QRIS, Visa and Mastercard, e-wallets. The guest pays on the provider's page.</li>
+<li>Midtrans, DOKU and Xendit all fit: QRIS, Visa and Mastercard, e-wallets. The guest pays on the provider's page, and the provider sends a signed payment notification.</li>
 <li>Payment is always in rupiah. The price in the guest's currency in the menu is only a guide, and a foreign card is converted by the guest's bank.</li>
-<li>QRIS: under Bank Indonesia rules, since 1 October 2026 there is no fee up to Rp 100,000 and 0.7% above that. The fee cannot be passed on to the guest. The limit is Rp 10 million per payment.</li>
-<li>Xendit adds Rp 4,000 to every payment and charges at least 50 US dollars a month. On a Rp 400,000 bill paid by QRIS that is about Rp 6,800 against Rp 2,800 at Midtrans or DOKU. Midtrans or DOKU suit a restaurant better.</li>
-<li>Tourists from Malaysia, Singapore and Thailand can pay by QRIS with their own apps. Everyone else pays by card, at about 2.9% + Rp 2,000.</li>
-<li>Money does not arrive instantly: for QRIS usually the next business day. A QRIS refund is possible within 7 days and not with every app.</li>
-<li>The restaurant signs the contract in its own company's name, and the money goes straight to its account. Each location gets its own sales point with the provider.</li>
+<li>QRIS: under Bank Indonesia rules, since 1 October 2026 there is no fee up to Rp 100,000 and 0.7% above that. The fee cannot be passed on to the guest. The limit is Rp 10 million per payment. Midtrans's help page still shows 0.7% on everything (page from November 2025), so check when signing up.</li>
+<li>Xendit adds Rp 4,000 to every payment, for cards even to a failed attempt, and from the second month charges at least 50 US dollars a month. On a Rp 400,000 bill paid by QRIS that is about Rp 6,800 against Rp 2,800 at Midtrans or DOKU, before VAT on the fee. Midtrans or DOKU suit a restaurant better.</li>
+<li>Tourists from partner countries pay by QRIS with their home apps, and the restaurant receives rupiah at no extra cost. DOKU confirms Thailand, Malaysia, Singapore, China and South Korea. According to Bank Indonesia most payment providers already support this; check with Midtrans and Xendit when signing up. Other guests pay by card, at about 2.9% + Rp 2,000.</li>
+<li>Money does not arrive instantly. For QRIS, DOKU and Xendit pay out the next business day; check with Midtrans.</li>
+<li>A QRIS refund is possible within 7 days and not with every app. Only the manager makes refunds.</li>
+<li>The restaurant signs the contract in its own company's name, and the provider will ask for company documents. The money goes straight to the restaurant's account; we never hold it. Each location gets its own sales point with the provider, so payments and reconciliation stay separate.</li>
 </ul>
 <h3>Taxes and accounting</h3>
-<p>The amount to pay comes from the PRESTO bill, which already includes the restaurant tax and service charge. Every payment from the app must close a bill in the POS, otherwise revenue and tax reporting will not match. The North Lombok tax office's rules for such payments should be checked with the accountant.</p>
+<p>The amount to pay comes from the PRESTO bill, which already includes the restaurant tax and service charge. Every payment from the app must close a bill in the POS, otherwise revenue in the POS and at the provider will not match, and neither will tax reporting. That is what the daily reconciliation is for. The North Lombok tax office's rules for payments outside the POS should be checked with the restaurant's accountant.</p>
 <h3>If the internet goes down</h3>
-<p>The POS and Order Taker keep working over the restaurant network. Payment and calls in the app are unavailable, the menu asks the guest to call a waiter, and the guest pays as usual.</p>
+<p>The POS and Order Taker keep working over the restaurant network. Payment, ordering and calls in the app are unavailable, the menu asks the guest to call a waiter, and the guest pays as usual, in cash or at the card terminal.</p>
 <h2 id="risks">Risks and protection</h2>
 <p>While the restaurant only has a menu, a mistake costs nothing. With payments every mistake costs money, so the aim is that any mistake is caught the same evening and costs no more than one bill.</p>
+<h3>Main rules</h3>
+<ol>
+<li>Money counts as received only when the payment provider has confirmed it and the table has turned green on the waiter's tablet. The guest's screen, a screenshot or the guest's word do not count.</li>
+<li>The guest leaves after the green status or after paying another way.</li>
+<li>Every evening a reconciliation: provider payments against "Online QR" payments in PRESTO. Any mismatch is looked into the next day.</li>
+<li>First the provider's test mode and a check against the list of scenarios, then one location with a limit per payment, then the rest. We never tune the logic on the live system.</li>
+<li>A "switch off payment" button: one tap returns the menu to paying through the waiter, and the POS works as before.</li>
+<li>Card data never reaches us: the guest pays on the provider's page. The amount to pay is set by our server, not by the guest's phone.</li>
+<li>We do not collect guests' personal data (Indonesian personal data law).</li>
+</ol>
 <h3>Fraudsters</h3>
 <div class="tbl"><table>
 <thead>
@@ -183,34 +223,34 @@
 </thead>
 <tbody>
 <tr>
-<td data-label="Situation">A copied table card with a QR code leads to a fake site with someone else's payment</td>
-<td data-label="Threat">The guest pays a fraudster</td>
-<td data-label="Protection">At stage 2 the payment QR is shown on the waiter's tablet, the table card plays no part in payment. Table cards are fixed and sealed. Every morning a waiter scans them with the tablet, and a fake gives a red signal. Since money counts only on green status, a fake shows up with the first guest.</td>
+<td data-label="Situation">A copy of the whole table card with a QR code leads to a fake site with someone else's payment</td>
+<td data-label="Threat">The guest pays a fraudster, the restaurant gets nothing, the guest is upset and may dispute a card payment</td>
+<td data-label="Protection">At stage 2 the payment QR is shown on the waiter's tablet, the table card plays no part in payment. Table cards are screwed down or under glass, with a seal that breaks if removed. At the start of the shift a waiter scans each card with the tablet in our app: a real one shows "table 12, all fine", a fake gives a red signal. Since money counts only on green status, a fake shows up with the first guest. From stage 3 the guest pays from the menu, and this check becomes mandatory every day.</td>
 </tr>
 <tr>
-<td data-label="Situation">A clone of the menu site</td>
+<td data-label="Situation">A clone of the menu site (copying a page is easy)</td>
 <td data-label="Threat">The same</td>
-<td data-label="Protection">The restaurant's own domain is printed on the table card. A clone cannot turn a table green. The fake address is reported for blocking.</td>
+<td data-label="Protection">The restaurant's own short domain is printed on the table card. A clone does not know the real table bill and cannot turn a table green. The fake address is reported to the host and registrar for blocking.</td>
 </tr>
 <tr>
-<td data-label="Situation">Someone else's QRIS sticker over the restaurant's QR (BRI bank warned about this scheme in November 2026)</td>
+<td data-label="Situation">Someone else's QRIS sticker over the restaurant's QR (BRI bank warned about this scheme on 23 November 2026)</td>
 <td data-label="Threat">The guest pays a fraudster</td>
-<td data-label="Protection">The guest sees the recipient in the banking app, and the restaurant name is printed next to the QR. Morning check of the cards.</td>
+<td data-label="Protection">The guest sees the recipient in the banking app. The name under which the restaurant is registered in QRIS is printed next to the QR. Plus the morning check of the cards.</td>
 </tr>
 <tr>
-<td data-label="Situation">A message to the guest saying "pay by this link"</td>
+<td data-label="Situation">A WhatsApp message to the guest saying "pay by this link"</td>
 <td data-label="Threat">The same</td>
-<td data-label="Protection">The restaurant never sends payment links, and the menu says so.</td>
+<td data-label="Protection">The restaurant never sends payment links in messages, and the menu says so.</td>
 </tr>
 <tr>
-<td data-label="Situation">Orders and calls from far away using a photo of the card</td>
-<td data-label="Threat">Staff running around</td>
-<td data-label="Protection">Call limits, switching a table off. An unpaid order never reaches the kitchen.</td>
+<td data-label="Situation">Calls, bill requests and orders from far away using a photo of the card</td>
+<td data-label="Threat">Staff running around, food thrown away</td>
+<td data-label="Protection">Call limits, switching a table off. An order without payment or a hold never reaches the kitchen, so a prankster would have to pay.</td>
 </tr>
 <tr>
-<td data-label="Situation">A break-in to the payment provider account</td>
+<td data-label="Situation">A break-in to the payment provider account or our server, with bank details swapped</td>
 <td data-label="Threat">Money goes to someone else's account</td>
-<td data-label="Protection">Two-step sign-in, only the owner has the account, alerts on any settings change. The evening reconciliation shows the loss the same day.</td>
+<td data-label="Protection">Two-step sign-in for everyone, only the owner has the provider account, alerts on any change to payment settings. The evening reconciliation shows the loss the same day.</td>
 </tr>
 </tbody>
 </table></div>
@@ -227,27 +267,32 @@
 <tr>
 <td data-label="Situation">Eats and leaves without paying</td>
 <td data-label="Threat">A lost bill</td>
-<td data-label="Protection">At stages 1 to 3 the risk is the same as today. From stage 4 an order from the app reaches the kitchen only when paid, and at stage 5 also within the hold on a card.</td>
+<td data-label="Protection">At stages 1 to 3 the waiter takes orders and the risk is the same as today; once a table bill passes a threshold, the waiter offers to settle before the next order. From stage 4 an order from the app reaches the kitchen only when paid, and at stage 5 also within the hold on a card. The only risk left is what the waiter added when the table has no hold.</td>
 </tr>
 <tr>
-<td data-label="Situation">A "paid" screenshot</td>
-<td data-label="Threat">Leaving without paying</td>
-<td data-label="Protection">Only the green status on the tablet counts. After payment the guest and the tablet show the same short code.</td>
+<td data-label="Situation">A huge order through the menu, then leaving</td>
+<td data-label="Threat">Food thrown away</td>
+<td data-label="Protection">Before stage 4 a menu order never reaches the kitchen: it is a list for the waiter, who takes the order himself. From stage 4 an order reaches the kitchen only when paid, and at stage 5 also within the hold on a card.</td>
 </tr>
 <tr>
-<td data-label="Situation">A card payment is disputed</td>
-<td data-label="Threat">Money is taken back weeks later</td>
-<td data-label="Protection">Card payments are confirmed in the guest's bank, and we keep the bill, time and table. A QRIS payment is much harder to dispute.</td>
-</tr>
-<tr>
-<td data-label="Situation">A hold fails to charge</td>
+<td data-label="Situation">The hold fails to charge at closing (the bank released it or refused)</td>
 <td data-label="Threat">Debt on an open tab</td>
-<td data-label="Protection">Bills are closed the same evening, and the hold has a margin.</td>
+<td data-label="Protection">All open bills are closed the same evening, and a hold lasts about 7 days. The hold has a margin; when the bill nears the limit, the guest tops up before the next order.</td>
+</tr>
+<tr>
+<td data-label="Situation">A "paid" screenshot or a fake screen</td>
+<td data-label="Threat">Leaving without paying</td>
+<td data-label="Protection">Only the green status on the tablet counts. After payment the guest and the tablet show the same short code: a one-second check.</td>
+</tr>
+<tr>
+<td data-label="Situation">A card payment is disputed ("it wasn't me", "I didn't like it")</td>
+<td data-label="Threat">Money is taken back weeks later, plus a fee</td>
+<td data-label="Protection">Card payments only with confirmation through the guest's bank (SMS or banking app): then an "it wasn't me" dispute usually falls on the guest's bank. We keep the bill, time, table and the name of the waiter who confirmed. The guest gets an e-receipt. With QRIS the guest confirms the payment in their own bank, so it is much harder to dispute later.</td>
 </tr>
 <tr>
 <td data-label="Situation">A dispute over the amount in another currency</td>
-<td data-label="Threat">A complaint</td>
-<td data-label="Protection">Payment is only in rupiah, and the payment page says the amount in other currencies is approximate.</td>
+<td data-label="Threat">A complaint, a refund</td>
+<td data-label="Protection">Payment is only in rupiah. The payment page says the amount in other currencies is approximate and the guest's bank converts at its own rate.</td>
 </tr>
 </tbody>
 </table></div>
@@ -262,33 +307,33 @@
 </thead>
 <tbody>
 <tr>
-<td data-label="Situation">Takes cash but marks the payment as "Online QR"</td>
+<td data-label="Situation">A waiter or cashier takes cash but marks the payment as "Online QR"</td>
 <td data-label="Threat">A shortfall</td>
-<td data-label="Protection">The evening reconciliation with the payment provider shows the mismatch and who marked it.</td>
+<td data-label="Protection">The "Online QR" total in PRESTO is matched with the provider's payments every evening. A mismatch shows at once, together with the name of whoever marked it.</td>
 </tr>
 <tr>
-<td data-label="Situation">Refunds money to themselves</td>
+<td data-label="Situation">Refunds money to themselves or a friend</td>
 <td data-label="Threat">A loss</td>
-<td data-label="Protection">Only the manager makes refunds, money goes back where it came from, and the owner is notified.</td>
+<td data-label="Protection">Only the manager makes refunds. The provider returns money only to where it came from. The owner is notified of every refund.</td>
 </tr>
 <tr>
 <td data-label="Situation">Marks a bill paid without payment</td>
 <td data-label="Threat">A loss</td>
-<td data-label="Protection">The app has no such button.</td>
+<td data-label="Protection">Our app has no such button. Cash and terminal payments are marked in Order Taker or PRESTO as usual.</td>
 </tr>
 <tr>
 <td data-label="Situation">A tablet is lost or stolen</td>
 <td data-label="Threat">Access to calls and bills</td>
-<td data-label="Protection">The tablet is switched off with one button, sign-in uses a PIN, and the manager approves any new device.</td>
+<td data-label="Protection">The tablet is switched off in the system with one button. App sign-in uses the waiter's PIN, and the tablet has a screen lock. A new device works only after the manager approves it, and a dismissed employee is switched off at once.</td>
 </tr>
 <tr>
-<td data-label="Situation">A call "from support" asking for a code</td>
+<td data-label="Situation">A call "from payment provider or Probus support" asking for a code</td>
 <td data-label="Threat">Account break-in</td>
-<td data-label="Protection">Codes are never shared with anyone.</td>
+<td data-label="Protection">Codes are never shared with anyone. Only the owner manages the provider account.</td>
 </tr>
 </tbody>
 </table></div>
-<h3>Technology</h3>
+<h3>Technology and our own mistakes</h3>
 <div class="tbl"><table>
 <thead>
 <tr>
@@ -299,61 +344,94 @@
 </thead>
 <tbody>
 <tr>
-<td data-label="Situation">The payment went through but the confirmation is late</td>
-<td data-label="Threat">The table wrongly shows unpaid</td>
-<td data-label="Protection">The server asks the provider again, the guest shows the payment in their bank, and reconciliation settles it.</td>
+<td data-label="Situation">The payment went through but the confirmation is late (connection on Gili)</td>
+<td data-label="Threat">The guest is kept waiting, or the table wrongly shows unpaid</td>
+<td data-label="Protection">The server asks the provider again by itself. While the status is "checking", the guest shows the payment in their bank, the waiter notes the time and amount, and the evening reconciliation settles it.</td>
 </tr>
 <tr>
-<td data-label="Situation">Double payment</td>
-<td data-label="Threat">A refund</td>
-<td data-label="Protection">Payment closes as soon as the bill is fully paid. If it still happens, the refund is made the same day.</td>
+<td data-label="Situation">Double payment (two guests paid one bill, a double tap)</td>
+<td data-label="Threat">A refund, an unhappy guest</td>
+<td data-label="Protection">Payment closes as soon as the bill is fully paid. If it still happens, the manager refunds the same day.</td>
 </tr>
 <tr>
-<td data-label="Situation">A wrong amount entered by hand</td>
+<td data-label="Situation">A wrong amount or wrong table entered by hand (stages 2 and 3)</td>
 <td data-label="Threat">Underpayment or overpayment</td>
-<td data-label="Protection">Entry by bill number, and the guest sees the table and amount before paying. Option B removes manual entry.</td>
+<td data-label="Protection">The amount is entered by the bill number from Order Taker or PRESTO, and the guest sees the table number and amount before paying. Option B removes manual entry.</td>
+</tr>
+<tr>
+<td data-label="Situation">A menu order re-entered in Order Taker with a mistake (stage 4 without Probus)</td>
+<td data-label="Threat">The guest paid for one thing, the kitchen got another</td>
+<td data-label="Protection">The waiter marks the order "transferred", and in the evening app orders are matched against the bills. Option B removes the re-entry.</td>
 </tr>
 <tr>
 <td data-label="Situation">A bug in our software</td>
-<td data-label="Threat">Wrong statuses</td>
-<td data-label="Protection">Test mode before launch, a pilot at one location with a limit, an off switch.</td>
+<td data-label="Threat">Wrong statuses and amounts</td>
+<td data-label="Protection">Test mode before launch, a pilot at one location with a limit per payment, daily reconciliation in the first weeks, an off switch.</td>
 </tr>
 <tr>
-<td data-label="Situation">No internet</td>
-<td data-label="Threat">Payment and calls in the app are unavailable</td>
-<td data-label="Protection">Everything works the old way.</td>
+<td data-label="Situation">No internet, or our server is down</td>
+<td data-label="Threat">Payment, ordering and calls in the app are unavailable</td>
+<td data-label="Protection">Order Taker and the POS keep working over the restaurant network as before. The menu asks the guest to call a waiter, and ordering and payment work the old way.</td>
+</tr>
+<tr>
+<td data-label="Situation">The payment provider delays payouts after a sharp rise in turnover</td>
+<td data-label="Threat">Money arrives later</td>
+<td data-label="Protection">When signing up, state the type of business and expected turnover correctly, and warn the provider about growth.</td>
 </tr>
 </tbody>
 </table></div>
 <h2 id="tests">Checks before launch</h2>
-<p>Each stage launches only when all its checks pass. We check in the payment provider's test mode, on the real tablets:</p>
+<p>Each stage launches only when all its checks pass. We check in the payment provider's test mode, on the waiters' real tablets:</p>
 <ul>
 <li>payment by QRIS and card, a bill split three ways, a failed payment, a cancellation;</li>
 <li>payment when the connection drops, a double tap, an attempt to pay a bill that is already paid;</li>
 <li>a full and a partial refund;</li>
 <li>a fake table card during the morning check;</li>
-<li>a call to a locked tablet, in silent mode, after a restart, without internet;</li>
+<li>a call while the waiter is working in Order Taker; to a locked tablet; in silent mode; after the app is swiped away; after a restart; on a flat battery; on a tablet without internet;</li>
 <li>nobody accepts a call: escalation up to the bar screen and WhatsApp;</li>
-<li>switching payment off with one button, and an evening reconciliation with a deliberate error;</li>
-<li>before stages 4 and 5: pay per order, an open tab with a hold, automatic closing, a bank refusal.</li>
+<li>switching payment off with one button;</li>
+<li>an evening reconciliation with a deliberate error;</li>
+<li>before stage 4 also: an order paid on the spot, re-entering an order in Order Taker and matching it;</li>
+<li>before stage 5 also: an open tab with a hold, ordering beyond the hold, automatic closing after the guest leaves, a bank refusal at charging.</li>
 </ul>
+<h2 id="next">Where to start</h2>
+<ol>
+<li>The owner writes to Probus (questions above), asks the accountant about taxes and makes the decisions in the next section.</li>
+<li>In parallel we build waiter calls on the tablets. This does not depend on Probus, as long as other apps can be installed on the tablets and they have internet (question 7).</li>
+<li>The restaurant signs a contract with a payment provider (Midtrans or DOKU). We test everything in test mode against the list above.</li>
+<li>We launch option A at one location with a limit per payment.</li>
+<li>Once Probus replies, we move to option B.</li>
+</ol>
 <h2 id="decisions">What the owner decides</h2>
 <ol>
-<li>Whether the waiters' tablets are enough or their phones are needed as a second channel for calls.</li>
+<li>Whether the waiters' tablets are enough or their own phones are needed as a second channel for calls.</li>
 <li>When to move from one stage to the next.</li>
 <li>The limit per payment in the first weeks, and the table bill amount after which the waiter offers to settle.</li>
-<li>For stage 5: pay per order, an open tab on a card, or both; the hold amount; after how many minutes without orders a bill closes by itself.</li>
+<li>For stage 5: pay per order, an open tab on a card, or both for the guest to choose; the hold amount; after how many minutes without orders a bill closes by itself.</li>
 </ol>
 <h2 id="sources">Sources</h2>
 <ul>
 <li>Probus System: <a href="https://probussystem.com/solusi/restaurant" rel="noopener" target="_blank">https://probussystem.com/solusi/restaurant</a></li>
 <li>Probus help: <a href="http://help.probussystem.com/dokumentasi" rel="noopener" target="_blank">http://help.probussystem.com/dokumentasi</a></li>
+<li>Order Taker on AppBrain: <a href="https://www.appbrain.com/app/order-taker/com.makuro.order_taker.order_taker" rel="noopener" target="_blank">https://www.appbrain.com/app/order-taker/com.makuro.order_taker.order_taker</a></li>
+<li>QRIS fee from 1 October 2026, Bank Indonesia: <a href="https://www.bi.go.id/id/publikasi/ruang-media/news-release/Pages/sp_2815926.aspx" rel="noopener" target="_blank">https://www.bi.go.id/id/publikasi/ruang-media/news-release/Pages/sp_2815926.aspx</a></li>
+<li>QRIS for tourists, Bank Indonesia: <a href="https://www.bi.go.id/en/fungsi-utama/sistem-pembayaran/ritel/kanal-layanan/QRIS/QRIS-Antarnegara" rel="noopener" target="_blank">https://www.bi.go.id/en/fungsi-utama/sistem-pembayaran/ritel/kanal-layanan/QRIS/QRIS-Antarnegara</a></li>
+<li>QRIS for tourists at DOKU: <a href="https://changelog.doku.com/qris-crossborder-china-and-south-korea" rel="noopener" target="_blank">https://changelog.doku.com/qris-crossborder-china-and-south-korea</a></li>
+<li>DOKU payout times: <a href="https://docs.doku.com/accept-payments/finance-and-settlement/settlement-time" rel="noopener" target="_blank">https://docs.doku.com/accept-payments/finance-and-settlement/settlement-time</a></li>
+<li>QRIS fee at Midtrans: <a href="https://docs.midtrans.com/docs/berapa-biaya-transaksi-untuk-qris" rel="noopener" target="_blank">https://docs.midtrans.com/docs/berapa-biaya-transaksi-untuk-qris</a></li>
 <li>QRIS at Xendit: <a href="https://docs.xendit.co/docs/qris" rel="noopener" target="_blank">https://docs.xendit.co/docs/qris</a></li>
+<li>Xendit fees: <a href="https://help.xendit.co/hc/en-us/articles/59516240127129-Xendit-Pricing-Policy" rel="noopener" target="_blank">https://help.xendit.co/hc/en-us/articles/59516240127129-Xendit-Pricing-Policy</a></li>
 <li>Card holds, Midtrans: <a href="https://docs.midtrans.com/reference/card-feature-pre-authorization" rel="noopener" target="_blank">https://docs.midtrans.com/reference/card-feature-pre-authorization</a></li>
 <li>Card holds, Xendit: <a href="https://docs.xendit.co/docs/cards-capturing-a-card-payment" rel="noopener" target="_blank">https://docs.xendit.co/docs/cards-capturing-a-card-payment</a></li>
-<li>Xendit fees: <a href="https://help.xendit.co/hc/en-us/articles/59516240127129-Xendit-Pricing-Policy" rel="noopener" target="_blank">https://help.xendit.co/hc/en-us/articles/59516240127129-Xendit-Pricing-Policy</a></li>
 <li>BRI warning about fake QRIS: <a href="https://bri.co.id/web/guest/id/news-detail/2843" rel="noopener" target="_blank">https://bri.co.id/web/guest/id/news-detail/2843</a></li>
+<li>Fake QRIS, Bank Muamalat: <a href="https://www.bankmuamalat.co.id/index.php/en/article/beware-of-fake-qris-payment-scams-how-to-stay-safe-during-digital-transactions" rel="noopener" target="_blank">https://www.bankmuamalat.co.id/index.php/en/article/beware-of-fake-qris-payment-scams-how-to-stay-safe-during-digital-transactions</a></li>
+<li>WhatsApp pricing, Meta: <a href="https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing" rel="noopener" target="_blank">https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing</a></li>
+<li>WhatsApp pricing in Indonesia: <a href="https://voltade.com/en-id/resources/guides/whatsapp/whatsapp-business-api-pricing" rel="noopener" target="_blank">https://voltade.com/en-id/resources/guides/whatsapp/whatsapp-business-api-pricing</a></li>
+<li>Full-screen calls on Android: <a href="https://support.google.com/googleplay/android-developer/answer/16558241?hl=en" rel="noopener" target="_blank">https://support.google.com/googleplay/android-developer/answer/16558241?hl=en</a></li>
+<li>Notifications on Xiaomi, Oppo, Vivo: <a href="https://signops.dev/blog/push-notifications-xiaomi-oppo-vivo/" rel="noopener" target="_blank">https://signops.dev/blog/push-notifications-xiaomi-oppo-vivo/</a></li>
+<li>Notifications on iPhone and iPad: <a href="https://developer.apple.com/design/human-interface-guidelines/managing-notifications" rel="noopener" target="_blank">https://developer.apple.com/design/human-interface-guidelines/managing-notifications</a></li>
 <li>QR order and pay at Toast: <a href="https://support.toasttab.com/en/article/Toast-Mobile-Order-and-Pay-FAQs" rel="noopener" target="_blank">https://support.toasttab.com/en/article/Toast-Mobile-Order-and-Pay-FAQs</a></li>
+<li>Open tabs in bars: <a href="https://www.tableview.com/blog/bar-tab-management/" rel="noopener" target="_blank">https://www.tableview.com/blog/bar-tab-management/</a></li>
 </ul></article>
 </div></main>
 <div class="meander" aria-hidden="true"></div><footer><div class="wrap">Updated 24 November 2026</div></footer>
